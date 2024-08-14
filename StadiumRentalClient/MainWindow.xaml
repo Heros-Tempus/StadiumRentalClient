@@ -1,0 +1,26 @@
+﻿<Window x:Class="StadiumRentalClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StadiumRentalClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Initialized="Window_Initialized">
+    <Grid Background="#FF333333">
+        <TabControl>
+            <TabItem Header="Party Customization">
+                <Grid Background="#FF3C3C3C">
+                    <Button Content="Button" HorizontalAlignment="Left" Margin="177,173,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tournament Play">
+                <Grid Background="#FF3C3C3C">
+                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="142,127,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Popup Name="ConnectionStringPopup" IsOpen="False" StaysOpen="False" Placement="Center">
+            <local:ConnectionStringDialog/>
+        </Popup>
+    </Grid>
+</Window>
