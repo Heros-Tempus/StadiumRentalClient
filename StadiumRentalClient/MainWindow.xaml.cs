@@ -38,16 +38,45 @@ namespace StadiumRentalClient
             {
                 dbClient = new MongoClient(connectionString);
             }
-            catch (MongoConfigurationException ex)
+            catch (Exception ex)
             {
-                return false;
-            }
-            catch (MongoAuthenticationException ex)
-            {
+                //message box: invalid connection string
                 return false;
             }
 
             return true;
         }
     }
+    public class Pokemon
+    {
+        public int Dex_num {  get; set; }
+        public string Species {  get; set; }
+        public string Type_1 { get; set; }
+        public string Type_2 { get; set; }
+        public Dictionary<string, string> Moves { get; set; }
+        public Dictionary<string, int>? Stats { get; set; }
+        private static List<string> Stat_Names = new List<string> { "hp", "atk", "spec", "def", "speed" };
+        public Pokemon()
+        {
+            Dex_num = -1;
+            Species = "";
+            Type_1 = "";
+            Type_2 = "";
+            Moves = new Dictionary<string, string>();
+            Stats = Stat_Names.ToDictionary(k=>k, k=>0);
+        }
+        public Pokemon(int dex_num, string species, string type_1, string type_2, Dictionary<string, string> moves)
+        {
+            Dex_num = dex_num;
+            Species = species;
+            Type_1 = type_1;
+            Type_2 = type_2;
+            Moves = moves;
+        }
+        public Pokemon(int dex_num, string species, string type_1, string type_2, Dictionary<string, string> moves, Dictionary<string, int>? stats) : this(dex_num, species, type_1, type_2, moves)
+        {
+            Stats = stats;
+        }
+    }
+
 }

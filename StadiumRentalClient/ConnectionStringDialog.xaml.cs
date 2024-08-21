@@ -41,7 +41,8 @@ namespace StadiumRentalClient
 
         private void Cancel_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            //message box: you cannot save your party 
+            Visibility = Visibility.Collapsed;
         }
         public static string GetConnectionString()
         {
