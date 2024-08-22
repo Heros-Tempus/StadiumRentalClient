@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:StadiumRentalClient"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#4C000000">
-        <Button x:Name="Cancel_Button" Content="Button" HorizontalAlignment="Left" Margin="428,117,0,0" VerticalAlignment="Top" Click="Cancel_Button_Click"/>
-        <Button x:Name="Ok_Button" Content="Button" HorizontalAlignment="Left" Margin="383,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.439,-0.476" Click="Ok_Button_Click"/>
-        <TextBox x:Name="Connection_String_Textbox" HorizontalAlignment="Left" Margin="258,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Enter Connection String" HorizontalAlignment="Left" Margin="43,109,0,0" VerticalAlignment="Top" Foreground="White"/>
+    <Grid Background="#4C000000" Margin="250,175,294,206">
+        <Button x:Name="Cancel_Button" Content="Cancel" VerticalAlignment="Top" Click="Cancel_Button_Click" Margin="201,40,0,0" Height="20" HorizontalAlignment="Left" Width="40"/>
+        <Button x:Name="Ok_Button" Content="Ok" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-0.439,-0.476" Click="Ok_Button_Click" Margin="156,40,0,0" Height="20" Width="40"/>
+        <TextBox x:Name="Connection_String_Textbox" HorizontalAlignment="Left" TextWrapping="Wrap" Width="136" Margin="15,40,0,0" Height="20" VerticalAlignment="Top"/>
+        <Label Content="Enter Connection String" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,10,0,0"/>
 
     </Grid>
 </UserControl>
