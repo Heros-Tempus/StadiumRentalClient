@@ -79,4 +79,43 @@ namespace StadiumRentalClient
         }
     }
 
+    public class Party
+    {
+        public string Name { get; set; }
+        public Pokemon Slot_1 { get; set; }
+        public Pokemon Slot_2 { get; set; }
+        public Pokemon Slot_3 { get; set; }
+        public Pokemon Slot_4 { get; set; }
+        public Pokemon Slot_5 { get; set; }
+        public Pokemon Slot_6 { get; set; }
+        public Dictionary<Pokemon, bool>? Battle_Set { get; set; }
+
+        public Party()
+        {
+            Name = string.Empty;
+            Slot_1 = new Pokemon();
+            Slot_2 = new Pokemon();
+            Slot_3 = new Pokemon();
+            Slot_4 = new Pokemon();
+            Slot_5 = new Pokemon();
+            Slot_6 = new Pokemon();
+            Battle_Set = new Dictionary<Pokemon, bool>();
+        }
+        public Party(string name, Pokemon slot_1, Pokemon slot_2, Pokemon slot_3, Pokemon slot_4, Pokemon slot_5, Pokemon slot_6)
+        {
+            Name = name;
+            Slot_1 = slot_1;
+            Slot_2 = slot_2;
+            Slot_3 = slot_3;
+            Slot_4 = slot_4;
+            Slot_5 = slot_5;
+            Slot_6 = slot_6;
+            Battle_Set = new Dictionary<Pokemon, bool>();
+        }
+        public Party(string name, Pokemon slot_1, Pokemon slot_2, Pokemon slot_3, Pokemon slot_4, Pokemon slot_5, Pokemon slot_6, Dictionary<Pokemon, bool> battle_Set) : this(name, slot_1, slot_2, slot_3, slot_4, slot_5, slot_6)
+        {
+            Battle_Set = battle_Set;
+        }
+    }
+
 }
