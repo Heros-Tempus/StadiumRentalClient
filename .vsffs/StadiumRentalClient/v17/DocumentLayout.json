@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|c:\\users\\tim_j\\source\\repos\\stadiumrentalclient\\stadiumrentalclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|solutionrelative:stadiumrentalclient\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|c:\\users\\tim_j\\source\\repos\\stadiumrentalclient\\stadiumrentalclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|solutionrelative:stadiumrentalclient\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|c:\\users\\tim_j\\source\\repos\\stadiumrentalclient\\stadiumrentalclient\\connectionstringdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|solutionrelative:stadiumrentalclient\\connectionstringdialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|c:\\users\\tim_j\\source\\repos\\stadiumrentalclient\\stadiumrentalclient\\connectionstringdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{78564357-D1F7-4A3D-B2C3-45350CDDA47C}|StadiumRentalClient\\StadiumRentalClient.csproj|solutionrelative:stadiumrentalclient\\connectionstringdialog.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConnectionStringDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\ConnectionStringDialog.xaml.cs",
+              "RelativeDocumentMoniker": "StadiumRentalClient\\ConnectionStringDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\ConnectionStringDialog.xaml.cs",
+              "RelativeToolTip": "StadiumRentalClient\\ConnectionStringDialog.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T23:11:52.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConnectionStringDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\ConnectionStringDialog.xaml",
+              "RelativeDocumentMoniker": "StadiumRentalClient\\ConnectionStringDialog.xaml",
+              "ToolTip": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\ConnectionStringDialog.xaml",
+              "RelativeToolTip": "StadiumRentalClient\\ConnectionStringDialog.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-13T23:08:39.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "StadiumRentalClient\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\MainWindow.xaml",
+              "RelativeToolTip": "StadiumRentalClient\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-07T22:37:52.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "StadiumRentalClient\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\tim_j\\source\\repos\\StadiumRentalClient\\StadiumRentalClient\\MainWindow.xaml.cs",
+              "RelativeToolTip": "StadiumRentalClient\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAiwIAAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T22:37:48.452Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,8 +9,57 @@
     <Grid Background="#FF333333">
         <TabControl>
             <TabItem Header="Party Customization">
-                <Grid Background="#FF3C3C3C">
-                    <Button Content="Button" HorizontalAlignment="Left" Margin="177,173,0,0" VerticalAlignment="Top"/>
+                <Grid Background="#FF282828">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Player Name" HorizontalAlignment="Left" Margin="27,15,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <TextBox x:Name="Player_Name" HorizontalAlignment="Left" Margin="27,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="BTN_Save_Party" Content="Push party to Database" HorizontalAlignment="Left" Margin="27,102,0,0" VerticalAlignment="Top" Click="Save_Party_Click"/>
+                    <GroupBox x:Name="Slot_1" Grid.Column="1" Header="Slot 1" Foreground="White">
+                        <StackPanel>
+                            <ComboBox x:Name="CB_Slot1" Width="120" SelectionChanged="CB_Slot1_SelectionChanged"/>
+                            <TextBlock x:Name="Species1" TextWrapping="Wrap" Text="-1 : SpeciesName"/>
+                            <TextBlock x:Name="Types1" TextWrapping="Wrap" Text="??? / ???"/>
+                            <TextBlock x:Name="Stats1" TextWrapping="Wrap" Text="HP: -1 Atk: -1 Def: -1 Spec: -1 Speed: -1"/>
+                            <TextBlock x:Name="Moves1" TextWrapping="Wrap" Text="Move1: ??? Move2: ??? Move3: ??? Move4: ???"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="Slot_2" Grid.Column="2" Header="Slot 2" Foreground="White">
+                        <StackPanel>
+                            <ComboBox x:Name="CB_Slot2" Width="120"/>
+                            <TextBlock x:Name="DexNumAndSpecies2" TextWrapping="Wrap" Text="TextBlock"/>
+                            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+                            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="Slot_3" Grid.Column="3" Header="Slot 3" Foreground="White">
+                        <StackPanel>
+                            <ComboBox Width="120"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="Slot_4" Grid.Column="1" Header="Slot 4" Grid.Row="1" Foreground="White">
+                        <StackPanel>
+                            <ComboBox Width="120"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="Slot_5" Grid.Column="2" Header="Slot 5" Grid.Row="1" Foreground="White">
+                        <StackPanel>
+                            <ComboBox Width="120"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <GroupBox x:Name="Slot_6" Grid.Column="3" Header="Slot 6" Grid.Row="1" Foreground="White">
+                        <StackPanel>
+                            <ComboBox Width="120"/>
+                        </StackPanel>
+                    </GroupBox>
                 </Grid>
             </TabItem>
             <TabItem Header="Tournament Play">
@@ -19,7 +68,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Popup Name="ConnectionStringPopup" IsOpen="False" StaysOpen="False" Placement="Center">
+        <Popup Name="ConnectionStringPopup" IsOpen="False" StaysOpen="True" Placement="Center">
             <local:ConnectionStringDialog/>
         </Popup>
     </Grid>

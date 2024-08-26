@@ -1,0 +1,1 @@
+mongodb+srv://user:7hzKeMkNWGdwtWPz@rentaltourney.eb8hc.mongodb.net/?retryWrites=true&w=majority&appName=RentalTourney

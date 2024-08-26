@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace StadiumRentalClient
 {
@@ -21,7 +23,6 @@ namespace StadiumRentalClient
     /// </summary>
     public partial class ConnectionStringDialog : UserControl
     {
-        private static string? connectionString;
         public ConnectionStringDialog()
         {
             InitializeComponent();
@@ -31,25 +32,20 @@ namespace StadiumRentalClient
         {
             if (Connection_String_Textbox.Text != "")
             {
-                connectionString = Connection_String_Textbox.Text;
-            }
-            MainWindow.Get_Key();
+                MongoClient dbClient;
+                try
+                {
+                    //dbClient = new MongoClient(MainWindow.connectionString);
+                    //MainWindow.connectionString = Connection_String_Textbox.Text;
+                }
+                catch (Exception ex)
+                {
 
-            if (MainWindow.Test_Key())
+                }
+                IsEnabled = false;
                 Visibility = Visibility.Collapsed;
+            }
         }
 
-        private void Cancel_Button_Click(object sender, RoutedEventArgs e)
-        {
-            //message box: you cannot save your party 
-            Visibility = Visibility.Collapsed;
-        }
-        public static string GetConnectionString()
-        {
-            if (connectionString != null)
-                return connectionString;
-            else
-                return "null";
-        }
     }
 }
