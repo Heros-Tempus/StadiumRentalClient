@@ -67,16 +67,8 @@ namespace StadiumRentalClient
 
             }
 
-        private void Load_Party()
-        {
-            //search database for party with matching player name
-            //if party is found then set all party slots to the relevent mons
-        }
         private void Load_Dex()
         {
-            //finds all pokemon in database and populates local list of pokemon objects
-            //sorts list based on dex number
-            //populates all combo boxes with available choices
 
             MongoClient dbClient = new MongoClient(connectionString);
             var db = dbClient.GetDatabase("Mons");
@@ -127,6 +119,11 @@ namespace StadiumRentalClient
             foreach (var mon in dex)
             {
                 CB_Slot1.Items.Add(mon);
+                CB_Slot2.Items.Add(mon);
+                CB_Slot3.Items.Add(mon);
+                CB_Slot4.Items.Add(mon);
+                CB_Slot5.Items.Add(mon);
+                CB_Slot6.Items.Add(mon);
             }
         }
 
@@ -134,28 +131,124 @@ namespace StadiumRentalClient
         {
             if (CB_Slot1.SelectedIndex != -1)
             {
-                var mon1 = CB_Slot1.SelectedItem as Pokemon;
-                Species1.Text = mon1.Species;
+                var mon = CB_Slot1.SelectedItem as Pokemon;
+                Species1.Text = mon.Species;
                 string moves = "C-Up: ";
-                moves += mon1.Moves["C-Up"];
+                moves += mon.Moves["C-Up"];
                 moves += "C-Down: ";
-                moves += mon1.Moves["C-Down"];
+                moves += mon.Moves["C-Down"];
                 moves += "C-Left: ";
-                moves += mon1.Moves["C-Left"];
+                moves += mon.Moves["C-Left"];
                 moves += "C-Right: ";
-                moves += mon1.Moves["C-Right"];
+                moves += mon.Moves["C-Right"];
 
                 Moves1.Text = moves;
-                team.Slot_1 = mon1;
+                team.Slot_1 = mon;
+            }
+        }
+        private void CB_Slot2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CB_Slot2.SelectedIndex != -1)
+            {
+                var mon = CB_Slot2.SelectedItem as Pokemon;
+                Species2.Text = mon.Species;
+                string moves = "C-Up: ";
+                moves += mon.Moves["C-Up"];
+                moves += "C-Down: ";
+                moves += mon.Moves["C-Down"];
+                moves += "C-Left: ";
+                moves += mon.Moves["C-Left"];
+                moves += "C-Right: ";
+                moves += mon.Moves["C-Right"];
+
+                Moves2.Text = moves;
+                team.Slot_2 = mon;
+            }
+
+        }
+        private void CB_Slot3_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CB_Slot3.SelectedIndex != -1)
+            {
+                var mon = CB_Slot3.SelectedItem as Pokemon;
+                Species3.Text = mon.Species;
+                string moves = "C-Up: ";
+                moves += mon.Moves["C-Up"];
+                moves += "C-Down: ";
+                moves += mon.Moves["C-Down"];
+                moves += "C-Left: ";
+                moves += mon.Moves["C-Left"];
+                moves += "C-Right: ";
+                moves += mon.Moves["C-Right"];
+
+                Moves3.Text = moves;
+                team.Slot_3 = mon;
+            }
+
+        }
+        private void CB_Slot4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CB_Slot4.SelectedIndex != -1)
+            {
+                var mon = CB_Slot4.SelectedItem as Pokemon;
+                Species4.Text = mon.Species;
+                string moves = "C-Up: ";
+                moves += mon.Moves["C-Up"];
+                moves += "C-Down: ";
+                moves += mon.Moves["C-Down"];
+                moves += "C-Left: ";
+                moves += mon.Moves["C-Left"];
+                moves += "C-Right: ";
+                moves += mon.Moves["C-Right"];
+
+                Moves4.Text = moves;
+                team.Slot_4 = mon;
+            }
+        }
+        private void CB_Slot5_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CB_Slot5.SelectedIndex != -1)
+            {
+                var mon = CB_Slot5.SelectedItem as Pokemon;
+                Species5.Text = mon.Species;
+                string moves = "C-Up: ";
+                moves += mon.Moves["C-Up"];
+                moves += "C-Down: ";
+                moves += mon.Moves["C-Down"];
+                moves += "C-Left: ";
+                moves += mon.Moves["C-Left"];
+                moves += "C-Right: ";
+                moves += mon.Moves["C-Right"];
+
+                Moves5.Text = moves;
+                team.Slot_5 = mon;
+            }
+        }
+        private void CB_Slot6_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (CB_Slot6.SelectedIndex != -1)
+            {
+                var mon = CB_Slot6.SelectedItem as Pokemon;
+                Species6.Text = mon.Species;
+                string moves = "C-Up: ";
+                moves += mon.Moves["C-Up"];
+                moves += "C-Down: ";
+                moves += mon.Moves["C-Down"];
+                moves += "C-Left: ";
+                moves += mon.Moves["C-Left"];
+                moves += "C-Right: ";
+                moves += mon.Moves["C-Right"];
+
+                Moves6.Text = moves;
+                team.Slot_6 = mon;
             }
         }
 
         private void Save_Party_Click(object sender, RoutedEventArgs e)
         {
-            //yell at them for not entering a unique name
             if (Player_Name.Text == string.Empty)
             {
-
+                //yell at them
             }
             else
             {
@@ -182,6 +275,29 @@ namespace StadiumRentalClient
                     replacement: document);
             }
 
+        }
+
+        private void Load_Party_Click(object sender, RoutedEventArgs e)
+        {
+            if (Player_Name.Text == string.Empty)
+            {
+                //yell at them louder
+            }
+            else
+            {
+                MongoClient dbClient = new MongoClient(connectionString);
+                var db = dbClient.GetDatabase("Tournament");
+                var collection = db.GetCollection<BsonDocument>("Parties");
+                var load = collection.Find(new BsonDocument("Party Name", Player_Name.Text)).FirstOrDefault();
+                var party = load.ToDictionary();
+                Player_Name.Text = party["Party Name"].ToString();
+                CB_Slot1.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 1"].ToString());
+                CB_Slot2.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 2"].ToString());
+                CB_Slot3.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 3"].ToString());
+                CB_Slot4.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 4"].ToString());
+                CB_Slot5.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 5"].ToString());
+                CB_Slot6.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 6"].ToString());
+            }
         }
     }
     public class Pokemon

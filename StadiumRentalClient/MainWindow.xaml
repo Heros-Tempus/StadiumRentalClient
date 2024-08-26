@@ -21,45 +21,63 @@
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Label Content="Player Name" HorizontalAlignment="Left" Margin="27,15,0,0" VerticalAlignment="Top" Foreground="White"/>
-                    <TextBox x:Name="Player_Name" HorizontalAlignment="Left" Margin="27,41,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="BTN_Save_Party" Content="Push party to Database" HorizontalAlignment="Left" Margin="27,102,0,0" VerticalAlignment="Top" Click="Save_Party_Click"/>
+                    <TextBox x:Name="Player_Name" HorizontalAlignment="Left" Margin="27,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Button x:Name="Save_Party" Content="Save to Database" HorizontalAlignment="Left" Margin="27,82,0,0" VerticalAlignment="Top" Click="Save_Party_Click"/>
                     <GroupBox x:Name="Slot_1" Grid.Column="1" Header="Slot 1" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot1" Width="120" SelectionChanged="CB_Slot1_SelectionChanged"/>
-                            <TextBlock x:Name="Species1" TextWrapping="Wrap" Text="-1 : SpeciesName"/>
-                            <TextBlock x:Name="Types1" TextWrapping="Wrap" Text="??? / ???"/>
-                            <TextBlock x:Name="Stats1" TextWrapping="Wrap" Text="HP: -1 Atk: -1 Def: -1 Spec: -1 Speed: -1"/>
-                            <TextBlock x:Name="Moves1" TextWrapping="Wrap" Text="Move1: ??? Move2: ??? Move3: ??? Move4: ???"/>
+                            <ComboBox x:Name="CB_Slot1" Width="120" SelectionChanged="CB_Slot1_SelectionChanged" IsEditable="True" StaysOpenOnEdit="True"/>
+                            <TextBlock x:Name="Species1" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Types1" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Stats1" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves1" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox x:Name="Slot_2" Grid.Column="2" Header="Slot 2" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot2" Width="120"/>
-                            <TextBlock x:Name="DexNumAndSpecies2" TextWrapping="Wrap" Text="TextBlock"/>
-                            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
-                            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+                            <ComboBox x:Name="CB_Slot2" Width="120" SelectionChanged="CB_Slot2_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <TextBlock x:Name="Species2" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Type2" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Stats2" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves2" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox x:Name="Slot_3" Grid.Column="3" Header="Slot 3" Foreground="White">
                         <StackPanel>
-                            <ComboBox Width="120"/>
+                            <ComboBox x:Name="CB_Slot3" Width="120" SelectionChanged="CB_Slot3_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <TextBlock x:Name="Species3" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Type3" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Stats3" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves3" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox x:Name="Slot_4" Grid.Column="1" Header="Slot 4" Grid.Row="1" Foreground="White">
                         <StackPanel>
-                            <ComboBox Width="120"/>
+                            <ComboBox x:Name="CB_Slot4" Width="120" SelectionChanged="CB_Slot4_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <TextBlock x:Name="Species4" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Type4" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Stats4" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves4" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox x:Name="Slot_5" Grid.Column="2" Header="Slot 5" Grid.Row="1" Foreground="White">
                         <StackPanel>
-                            <ComboBox Width="120"/>
+                            <ComboBox x:Name="CB_Slot5" Width="120" SelectionChanged="CB_Slot5_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <TextBlock x:Name="Species5" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Type5" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Stats5" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves5" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
                     <GroupBox x:Name="Slot_6" Grid.Column="3" Header="Slot 6" Grid.Row="1" Foreground="White">
                         <StackPanel>
-                            <ComboBox Width="120"/>
+                            <ComboBox x:Name="CB_Slot6" Width="120" SelectionChanged="CB_Slot6_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <TextBlock x:Name="Species6" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Type6" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Stats6" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves6" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
+                    <Button x:Name="Load_Party" Content="Load from Database" HorizontalAlignment="Left" Margin="27,122,0,0" VerticalAlignment="Top" Click="Load_Party_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Tournament Play">
