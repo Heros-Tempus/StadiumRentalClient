@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:StadiumRentalClient"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Initialized="Window_Initialized">
-    <Grid Background="#FF333333">
+    <Grid Background="#FF282828">
         <TabControl>
             <TabItem Header="Party Customization">
                 <Grid Background="#FF282828">
@@ -23,16 +23,16 @@
                     <Label Content="Player Name" HorizontalAlignment="Left" Margin="27,15,0,0" VerticalAlignment="Top" Foreground="White"/>
                     <TextBox x:Name="Player_Name" HorizontalAlignment="Left" Margin="27,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
                     <Button x:Name="Save_Party" Content="Save to Database" HorizontalAlignment="Left" Margin="27,82,0,0" VerticalAlignment="Top" Click="Save_Party_Click"/>
-                    <GroupBox x:Name="Slot_1" Grid.Column="1" Header="Slot 1" Foreground="White">
+                    <GroupBox x:Name="Group_Slot_1" Grid.Column="1" Header="Slot 1" Foreground="White">
                         <StackPanel>
                             <ComboBox x:Name="CB_Slot1" Width="120" SelectionChanged="CB_Slot1_SelectionChanged" IsEditable="True" StaysOpenOnEdit="True"/>
                             <TextBlock x:Name="Species1" TextWrapping="Wrap"/>
-                            <TextBlock x:Name="Types1" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Type1" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Stats1" TextWrapping="Wrap"/>
-                            <TextBlock x:Name="Moves1" TextWrapping="Wrap"/>
+                            <TextBlock x:Name="Moves1" TextWrapping="Wrap" IsHyphenationEnabled="True"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox x:Name="Slot_2" Grid.Column="2" Header="Slot 2" Foreground="White">
+                    <GroupBox x:Name="Group_Slot_2" Grid.Column="2" Header="Slot 2" Foreground="White">
                         <StackPanel>
                             <ComboBox x:Name="CB_Slot2" Width="120" SelectionChanged="CB_Slot2_SelectionChanged" StaysOpenOnEdit="True"/>
                             <TextBlock x:Name="Species2" TextWrapping="Wrap"/>
@@ -41,7 +41,7 @@
                             <TextBlock x:Name="Moves2" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox x:Name="Slot_3" Grid.Column="3" Header="Slot 3" Foreground="White">
+                    <GroupBox x:Name="Group_Slot_3" Grid.Column="3" Header="Slot 3" Foreground="White">
                         <StackPanel>
                             <ComboBox x:Name="CB_Slot3" Width="120" SelectionChanged="CB_Slot3_SelectionChanged" StaysOpenOnEdit="True"/>
                             <TextBlock x:Name="Species3" TextWrapping="Wrap"/>
@@ -50,7 +50,7 @@
                             <TextBlock x:Name="Moves3" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox x:Name="Slot_4" Grid.Column="1" Header="Slot 4" Grid.Row="1" Foreground="White">
+                    <GroupBox x:Name="Group_Slot_4" Grid.Column="1" Header="Slot 4" Grid.Row="1" Foreground="White">
                         <StackPanel>
                             <ComboBox x:Name="CB_Slot4" Width="120" SelectionChanged="CB_Slot4_SelectionChanged" StaysOpenOnEdit="True"/>
                             <TextBlock x:Name="Species4" TextWrapping="Wrap"/>
@@ -59,7 +59,7 @@
                             <TextBlock x:Name="Moves4" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox x:Name="Slot_5" Grid.Column="2" Header="Slot 5" Grid.Row="1" Foreground="White">
+                    <GroupBox x:Name="Group_Slot_5" Grid.Column="2" Header="Slot 5" Grid.Row="1" Foreground="White">
                         <StackPanel>
                             <ComboBox x:Name="CB_Slot5" Width="120" SelectionChanged="CB_Slot5_SelectionChanged" StaysOpenOnEdit="True"/>
                             <TextBlock x:Name="Species5" TextWrapping="Wrap"/>
@@ -68,7 +68,7 @@
                             <TextBlock x:Name="Moves5" TextWrapping="Wrap"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox x:Name="Slot_6" Grid.Column="3" Header="Slot 6" Grid.Row="1" Foreground="White">
+                    <GroupBox x:Name="Group_Slot_6" Grid.Column="3" Header="Slot 6" Grid.Row="1" Foreground="White">
                         <StackPanel>
                             <ComboBox x:Name="CB_Slot6" Width="120" SelectionChanged="CB_Slot6_SelectionChanged" StaysOpenOnEdit="True"/>
                             <TextBlock x:Name="Species6" TextWrapping="Wrap"/>
@@ -81,13 +81,81 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Tournament Play">
-                <Grid Background="#FF3C3C3C">
-                    <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="142,127,0,0" VerticalAlignment="Top"/>
+                <Grid Background="#FF282828">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Grid.Column="1" Header="First" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="Slot_1" TextWrapping="Wrap" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button x:Name="Slot_1_Swap" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,10,10,10" Click="Slot_1_Swap_Click" Content="Swap In" Background="#FFDDDDDD"/>
+                            <Button x:Name="Slot_1_C_Up" Grid.Row="2" Click="Slot_1_C_Up_Click"/>
+                            <Button x:Name="Slot_1_C_Left" Grid.Row="3" Click="Slot_1_C_Left_Click"/>
+                            <Button x:Name="Slot_1_C_Right" Grid.Row="2" Grid.Column="1" Click="Slot_1_C_Right_Click"/>
+                            <Button x:Name="Slot_1_C_Down" Grid.Row="3" Grid.Column="1" Click="Slot_1_C_Down_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Column="2" Header="Second" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="Slot_2" TextWrapping="Wrap" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button x:Name="Slot_2_Swap" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,10,10,10" Click="Slot_2_Swap_Click" Content="Swap In"/>
+                            <Button x:Name="Slot_2_C_Up" Grid.Row="2" Click="Slot_2_C_Up_Click"/>
+                            <Button x:Name="Slot_2_C_Left" Grid.Row="3" Click="Slot_2_C_Left_Click"/>
+                            <Button x:Name="Slot_2_C_Right" Grid.Row="2" Grid.Column="1" Click="Slot_2_C_Right_Click"/>
+                            <Button x:Name="Slot_2_C_Down" Grid.Row="3" Grid.Column="1" Click="Slot_2_C_Down_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Column="3" Header="Third" Foreground="White">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="Slot_3" TextWrapping="Wrap" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            <Button x:Name="Slot_3_Swap" Grid.Row="1" Grid.ColumnSpan="2" Margin="10,10,10,10" Click="Slot_3_Swap_Click" Content="Swap In"/>
+                            <Button x:Name="Slot_3_C_Up" Grid.Row="2" Click="Slot_3_C_Up_Click"/>
+                            <Button x:Name="Slot_3_C_Left" Grid.Row="3" Click="Slot_3_C_Left_Click"/>
+                            <Button x:Name="Slot_3_C_Right" Grid.Row="2" Grid.Column="1" Click="Slot_3_C_Right_Click"/>
+                            <Button x:Name="Slot_3_C_Down" Grid.Row="3" Grid.Column="1" Click="Slot_3_C_Down_Click"/>
+                        </Grid>
+                    </GroupBox>
+                    <ComboBox x:Name="CB_Battleset_Slot1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot1_SelectionChanged" Margin="0,34,0,0"/>
+                    <ComboBox x:Name="CB_Battleset_Slot2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot2_SelectionChanged" Margin="0,61,0,0"/>
+                    <ComboBox x:Name="CB_Battleset_Slot3" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot3_SelectionChanged" Margin="0,88,0,0"/>
+                    <Button x:Name="Upload_Battle_Set" Content="Upload Battle Set" HorizontalAlignment="Left" Margin="39,115,0,0" VerticalAlignment="Top" Click="Upload_Battle_Set_Click"/>
+                    <Button x:Name="Update_From_Database" Content="Load from Database" HorizontalAlignment="Left" Margin="39,9,0,0" VerticalAlignment="Top" Click="Update_From_Database_Click"/>
+                    <Button x:Name="Commit_Input" Content="Commit Input To Database" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Commit_Input_Click" Margin="39,171,0,0"/>
                 </Grid>
             </TabItem>
         </TabControl>
-        <Popup Name="ConnectionStringPopup" IsOpen="False" StaysOpen="True" Placement="Center">
-            <local:ConnectionStringDialog/>
-        </Popup>
     </Grid>
 </Window>
