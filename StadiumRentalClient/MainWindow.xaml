@@ -34,7 +34,7 @@
                     </GroupBox>
                     <GroupBox x:Name="Group_Slot_2" Grid.Column="2" Header="Slot 2" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot2" Width="120" SelectionChanged="CB_Slot2_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <ComboBox x:Name="CB_Slot2" Width="120" SelectionChanged="CB_Slot2_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True"/>
                             <TextBlock x:Name="Species2" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Type2" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Stats2" TextWrapping="Wrap"/>
@@ -43,7 +43,7 @@
                     </GroupBox>
                     <GroupBox x:Name="Group_Slot_3" Grid.Column="3" Header="Slot 3" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot3" Width="120" SelectionChanged="CB_Slot3_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <ComboBox x:Name="CB_Slot3" Width="120" SelectionChanged="CB_Slot3_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True"/>
                             <TextBlock x:Name="Species3" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Type3" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Stats3" TextWrapping="Wrap"/>
@@ -52,7 +52,7 @@
                     </GroupBox>
                     <GroupBox x:Name="Group_Slot_4" Grid.Column="1" Header="Slot 4" Grid.Row="1" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot4" Width="120" SelectionChanged="CB_Slot4_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <ComboBox x:Name="CB_Slot4" Width="120" SelectionChanged="CB_Slot4_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True"/>
                             <TextBlock x:Name="Species4" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Type4" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Stats4" TextWrapping="Wrap"/>
@@ -61,7 +61,7 @@
                     </GroupBox>
                     <GroupBox x:Name="Group_Slot_5" Grid.Column="2" Header="Slot 5" Grid.Row="1" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot5" Width="120" SelectionChanged="CB_Slot5_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <ComboBox x:Name="CB_Slot5" Width="120" SelectionChanged="CB_Slot5_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True"/>
                             <TextBlock x:Name="Species5" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Type5" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Stats5" TextWrapping="Wrap"/>
@@ -70,7 +70,7 @@
                     </GroupBox>
                     <GroupBox x:Name="Group_Slot_6" Grid.Column="3" Header="Slot 6" Grid.Row="1" Foreground="White">
                         <StackPanel>
-                            <ComboBox x:Name="CB_Slot6" Width="120" SelectionChanged="CB_Slot6_SelectionChanged" StaysOpenOnEdit="True"/>
+                            <ComboBox x:Name="CB_Slot6" Width="120" SelectionChanged="CB_Slot6_SelectionChanged" StaysOpenOnEdit="True" IsEditable="True"/>
                             <TextBlock x:Name="Species6" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Type6" TextWrapping="Wrap"/>
                             <TextBlock x:Name="Stats6" TextWrapping="Wrap"/>

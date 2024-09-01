@@ -398,6 +398,27 @@ namespace StadiumRentalClient
                     var upsert = collection.ReplaceOne(filter: new BsonDocument("Party Name", Player_Name.Text),
                         options: new ReplaceOptions { IsUpsert = true },
                         replacement: document);
+
+                        CB_Battleset_Slot1.Items.Add(team.Slot_1);
+                        CB_Battleset_Slot1.Items.Add(team.Slot_2);
+                        CB_Battleset_Slot1.Items.Add(team.Slot_3);
+                        CB_Battleset_Slot1.Items.Add(team.Slot_4);
+                        CB_Battleset_Slot1.Items.Add(team.Slot_5);
+                        CB_Battleset_Slot1.Items.Add(team.Slot_6);
+
+                        CB_Battleset_Slot2.Items.Add(team.Slot_1);
+                        CB_Battleset_Slot2.Items.Add(team.Slot_2);
+                        CB_Battleset_Slot2.Items.Add(team.Slot_3);
+                        CB_Battleset_Slot2.Items.Add(team.Slot_4);
+                        CB_Battleset_Slot2.Items.Add(team.Slot_5);
+                        CB_Battleset_Slot2.Items.Add(team.Slot_6);
+
+                        CB_Battleset_Slot3.Items.Add(team.Slot_1);
+                        CB_Battleset_Slot3.Items.Add(team.Slot_2);
+                        CB_Battleset_Slot3.Items.Add(team.Slot_3);
+                        CB_Battleset_Slot3.Items.Add(team.Slot_4);
+                        CB_Battleset_Slot3.Items.Add(team.Slot_5);
+                        CB_Battleset_Slot3.Items.Add(team.Slot_6);
                 }
             }
 
@@ -411,46 +432,53 @@ namespace StadiumRentalClient
             }
             else
             {
-                MongoClient dbClient = new MongoClient(connectionString);
-                var db = dbClient.GetDatabase("Tournament");
-                var collection = db.GetCollection<BsonDocument>("Parties");
-                var load = collection.Find(new BsonDocument("Party Name", Player_Name.Text)).FirstOrDefault();
-                var party = load.ToDictionary();
-                Player_Name.Text = party["Party Name"].ToString();
-                CB_Slot1.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 1"].ToString());
-                CB_Slot2.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 2"].ToString());
-                CB_Slot3.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 3"].ToString());
-                CB_Slot4.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 4"].ToString());
-                CB_Slot5.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 5"].ToString());
-                CB_Slot6.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 6"].ToString());
+                try
+                {
+                    MongoClient dbClient = new MongoClient(connectionString);
+                    var db = dbClient.GetDatabase("Tournament");
+                    var collection = db.GetCollection<BsonDocument>("Parties");
+                    var load = collection.Find(new BsonDocument("Party Name", Player_Name.Text)).FirstOrDefault();
+                    var party = load.ToDictionary();
+                    Player_Name.Text = party["Party Name"].ToString();
+                    CB_Slot1.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 1"].ToString());
+                    CB_Slot2.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 2"].ToString());
+                    CB_Slot3.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 3"].ToString());
+                    CB_Slot4.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 4"].ToString());
+                    CB_Slot5.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 5"].ToString());
+                    CB_Slot6.SelectedItem = dex.FirstOrDefault(x => x.Species == party["Slot 6"].ToString());
 
-                team.Slot_1 = CB_Slot1.SelectedItem as Pokemon;
-                team.Slot_2 = CB_Slot2.SelectedItem as Pokemon;
-                team.Slot_3 = CB_Slot3.SelectedItem as Pokemon;
-                team.Slot_4 = CB_Slot4.SelectedItem as Pokemon;
-                team.Slot_5 = CB_Slot5.SelectedItem as Pokemon;
-                team.Slot_6 = CB_Slot6.SelectedItem as Pokemon;
+                    team.Slot_1 = CB_Slot1.SelectedItem as Pokemon;
+                    team.Slot_2 = CB_Slot2.SelectedItem as Pokemon;
+                    team.Slot_3 = CB_Slot3.SelectedItem as Pokemon;
+                    team.Slot_4 = CB_Slot4.SelectedItem as Pokemon;
+                    team.Slot_5 = CB_Slot5.SelectedItem as Pokemon;
+                    team.Slot_6 = CB_Slot6.SelectedItem as Pokemon;
 
-                CB_Battleset_Slot1.Items.Add(team.Slot_1);
-                CB_Battleset_Slot1.Items.Add(team.Slot_2);
-                CB_Battleset_Slot1.Items.Add(team.Slot_3);
-                CB_Battleset_Slot1.Items.Add(team.Slot_4);
-                CB_Battleset_Slot1.Items.Add(team.Slot_5);
-                CB_Battleset_Slot1.Items.Add(team.Slot_6);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_1);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_2);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_3);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_4);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_5);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_6);
 
-                CB_Battleset_Slot2.Items.Add(team.Slot_1);
-                CB_Battleset_Slot2.Items.Add(team.Slot_2);
-                CB_Battleset_Slot2.Items.Add(team.Slot_3);
-                CB_Battleset_Slot2.Items.Add(team.Slot_4);
-                CB_Battleset_Slot2.Items.Add(team.Slot_5);
-                CB_Battleset_Slot2.Items.Add(team.Slot_6);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_1);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_2);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_3);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_4);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_5);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_6);
 
-                CB_Battleset_Slot3.Items.Add(team.Slot_1);
-                CB_Battleset_Slot3.Items.Add(team.Slot_2);
-                CB_Battleset_Slot3.Items.Add(team.Slot_3);
-                CB_Battleset_Slot3.Items.Add(team.Slot_4);
-                CB_Battleset_Slot3.Items.Add(team.Slot_5);
-                CB_Battleset_Slot3.Items.Add(team.Slot_6);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_1);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_2);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_3);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_4);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_5);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_6);
+                }
+                catch
+                {
+                    MessageBox.Show("Party was not found in the database.\nAre you sure you saved before loading?", "Error 3");
+                }
             }
         }
 
@@ -693,6 +721,7 @@ namespace StadiumRentalClient
             }
             Reset_Input_Buttons_Color();
             Proposed_Input = String.Empty;
+            MessageBox.Show("Sent input to database");
         }
 
         private void Reset_Input_Buttons_Color()
@@ -908,11 +937,18 @@ namespace StadiumRentalClient
         }
         public bool Battle_Set_Validate()
         {
-            if (Battle_Set[0].Species != "" && Battle_Set[1].Species != "" && Battle_Set[2].Species != "")
+            try 
             {
-                return true;
+                if (Battle_Set[0].Species != "" && Battle_Set[1].Species != "" && Battle_Set[2].Species != "")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch
             {
                 return false;
             }
