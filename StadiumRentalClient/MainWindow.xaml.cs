@@ -348,6 +348,10 @@ namespace StadiumRentalClient
             {
                 MessageBox.Show("You need to enter your name in the textbox", "Error 0");
             }
+            else if (CB_Slot1.SelectedIndex == -1 || CB_Slot2.SelectedIndex == -1 || CB_Slot3.SelectedIndex == -1 || CB_Slot4.SelectedIndex == -1 || CB_Slot5.SelectedIndex == -1 || CB_Slot6.SelectedIndex == -1)
+            {
+                MessageBox.Show("You need to fill out your party", "Error 1");
+            }
             else
             {
                 string PlayerName = Microsoft.VisualBasic.FileSystem.CurDir() + "\\PlayerName";
@@ -403,7 +407,7 @@ namespace StadiumRentalClient
         {
             if (Player_Name.Text == string.Empty)
             {
-                MessageBox.Show("The database cannot be queried without a name to search for\nPut yours in the text box", "Error 1");
+                MessageBox.Show("The database cannot be queried without a name to search for\nPut yours in the text box", "Error 2");
             }
             else
             {
