@@ -148,12 +148,15 @@
                             <Button x:Name="Slot_3_C_Down" Grid.Row="3" Grid.Column="1" Click="Slot_3_C_Down_Click"/>
                         </Grid>
                     </GroupBox>
-                    <ComboBox x:Name="CB_Battleset_Slot1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot1_SelectionChanged" Margin="0,34,0,0"/>
-                    <ComboBox x:Name="CB_Battleset_Slot2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot2_SelectionChanged" Margin="0,61,0,0"/>
-                    <ComboBox x:Name="CB_Battleset_Slot3" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot3_SelectionChanged" Margin="0,88,0,0"/>
-                    <Button x:Name="Upload_Battle_Set" Content="Upload Battle Set" HorizontalAlignment="Left" Margin="39,115,0,0" VerticalAlignment="Top" Click="Upload_Battle_Set_Click"/>
-                    <Button x:Name="Update_From_Database" Content="Load from Database" HorizontalAlignment="Left" Margin="39,9,0,0" VerticalAlignment="Top" Click="Update_From_Database_Click"/>
+                    <ComboBox x:Name="CB_Battleset_Slot1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot1_SelectionChanged" Margin="64,37,0,0"/>
+                    <ComboBox x:Name="CB_Battleset_Slot2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot2_SelectionChanged" Margin="64,64,0,0"/>
+                    <ComboBox x:Name="CB_Battleset_Slot3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectionChanged="CB_Battleset_Slot3_SelectionChanged" Margin="64,91,0,0"/>
+                    <Button x:Name="Upload_Battle_Set" Content="Upload Battle Set" HorizontalAlignment="Left" Margin="64,118,0,0" VerticalAlignment="Top" Click="Upload_Battle_Set_Click"/>
+                    <Button x:Name="Update_From_Database" Content="Load from Database" HorizontalAlignment="Left" Margin="64,12,0,0" VerticalAlignment="Top" Click="Update_From_Database_Click"/>
                     <Button x:Name="Commit_Input" Content="Commit Input To Database" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Commit_Input_Click" Margin="39,171,0,0"/>
+                    <Label Content="First" HorizontalAlignment="Left" Margin="21,35,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label Content="Second" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label Content="Third" HorizontalAlignment="Left" Margin="21,89,0,0" VerticalAlignment="Top" Foreground="White"/>
                 </Grid>
             </TabItem>
         </TabControl>

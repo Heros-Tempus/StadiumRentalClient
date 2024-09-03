@@ -399,26 +399,30 @@ namespace StadiumRentalClient
                         options: new ReplaceOptions { IsUpsert = true },
                         replacement: document);
 
-                        CB_Battleset_Slot1.Items.Add(team.Slot_1);
-                        CB_Battleset_Slot1.Items.Add(team.Slot_2);
-                        CB_Battleset_Slot1.Items.Add(team.Slot_3);
-                        CB_Battleset_Slot1.Items.Add(team.Slot_4);
-                        CB_Battleset_Slot1.Items.Add(team.Slot_5);
-                        CB_Battleset_Slot1.Items.Add(team.Slot_6);
+                    CB_Battleset_Slot1.Items.Clear();
+                    CB_Battleset_Slot2.Items.Clear();
+                    CB_Battleset_Slot3.Items.Clear();
 
-                        CB_Battleset_Slot2.Items.Add(team.Slot_1);
-                        CB_Battleset_Slot2.Items.Add(team.Slot_2);
-                        CB_Battleset_Slot2.Items.Add(team.Slot_3);
-                        CB_Battleset_Slot2.Items.Add(team.Slot_4);
-                        CB_Battleset_Slot2.Items.Add(team.Slot_5);
-                        CB_Battleset_Slot2.Items.Add(team.Slot_6);
-
-                        CB_Battleset_Slot3.Items.Add(team.Slot_1);
-                        CB_Battleset_Slot3.Items.Add(team.Slot_2);
-                        CB_Battleset_Slot3.Items.Add(team.Slot_3);
-                        CB_Battleset_Slot3.Items.Add(team.Slot_4);
-                        CB_Battleset_Slot3.Items.Add(team.Slot_5);
-                        CB_Battleset_Slot3.Items.Add(team.Slot_6);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_1);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_2);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_3);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_4);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_5);
+                    CB_Battleset_Slot1.Items.Add(team.Slot_6);
+                    
+                    CB_Battleset_Slot2.Items.Add(team.Slot_1);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_2);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_3);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_4);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_5);
+                    CB_Battleset_Slot2.Items.Add(team.Slot_6);
+                    
+                    CB_Battleset_Slot3.Items.Add(team.Slot_1);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_2);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_3);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_4);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_5);
+                    CB_Battleset_Slot3.Items.Add(team.Slot_6);
                 }
             }
 
