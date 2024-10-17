@@ -458,6 +458,10 @@ namespace StadiumRentalClient
                     team.Slot_5 = CB_Slot5.SelectedItem as Pokemon;
                     team.Slot_6 = CB_Slot6.SelectedItem as Pokemon;
 
+                    CB_Battleset_Slot1.Items.Clear();
+                    CB_Battleset_Slot2.Items.Clear();
+                    CB_Battleset_Slot3.Items.Clear();
+
                     CB_Battleset_Slot1.Items.Add(team.Slot_1);
                     CB_Battleset_Slot1.Items.Add(team.Slot_2);
                     CB_Battleset_Slot1.Items.Add(team.Slot_3);
@@ -635,6 +639,10 @@ namespace StadiumRentalClient
             team.Slot_5 = CB_Slot5.SelectedItem as Pokemon;
             team.Slot_6 = CB_Slot6.SelectedItem as Pokemon;
 
+            CB_Battleset_Slot1.Items.Clear();
+            CB_Battleset_Slot2.Items.Clear();
+            CB_Battleset_Slot3.Items.Clear();
+
             CB_Battleset_Slot1.Items.Add(team.Slot_1);
             CB_Battleset_Slot1.Items.Add(team.Slot_2);
             CB_Battleset_Slot1.Items.Add(team.Slot_3);
@@ -667,8 +675,6 @@ namespace StadiumRentalClient
                 Proposed_Input = "Swap : C-Left";
             }
         }
-
-
         private void Slot_1_C_Up_Click(object sender, RoutedEventArgs e)
         {
             if (team.Battle_Set_Validate())
